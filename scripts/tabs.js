@@ -27,13 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (name === '') {
       showMainMenu();
     }
-    else if (name === 'subscribe-popup') {
-      showSubscribePopup();
-    }
-    else if (name.startsWith('show-popup-')) {
-      let show = window.location.hash.substr('#show-popup-'.length);
-      showShowPopup(show);
-    }
     else {
       showSection(name);
     }
@@ -51,54 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.body.classList.remove('show-main-menu');
-    hideSubscribePopup();
     selectSection(section);
-  }
-
-  document.getElementById('subscribe-popup').getElementsByClassName('exit')[0].onclick = hideSubscribePopup;
-  document.getElementById('subscribe-popup').onclick = function (e) {
-    if (e.target === document.getElementById('subscribe-popup')) hideSubscribePopup();
-  };
-
-  function showSubscribePopup() {
-    document.body.classList.add('show-subscribe-popup');
-    document.body.classList.remove('show-main-menu');
-    document.body.classList.remove('show-show-popup');
-    document.getElementById('subscribe-popup').classList.add('selected');
-  }
-
-  function hideSubscribePopup() {
-    let subscribePopup = document.getElementById('subscribe-popup');
-    if (subscribePopup.classList.contains('selected')) {
-      window.location.hash = history;
-      subscribePopup.classList.remove('selected');
-    }
-    document.body.classList.remove('show-subscribe-popup');
-  }
-
-  document.getElementById('show-popup').getElementsByClassName('exit')[0].onclick = hideShowPopup;
-  document.getElementById('show-popup').onclick = function (e) {
-    if (e.target === document.getElementById('show-popup')) hideShowPopup();
-  };
-
-  function showShowPopup(show) {
-    document.body.classList.add('show-show-popup');
-    document.body.classList.remove('show-main-menu');
-    document.body.classList.remove('show-subscribe-popup');
-    document.getElementById('show-popup').classList.add('selected');
-
-    let form = document.getElementById('show-popup').getElementsByTagName('FORM')[0];
-    form.action = '#show-popup-' + show;
-    document.getElementsByName('tag')[0].value = 'show-' + show; // TODO:
-  }
-
-  function hideShowPopup() {
-    let subscribePopup = document.getElementById('show-popup');
-    if (subscribePopup.classList.contains('selected')) {
-      window.location.hash = history;
-      subscribePopup.classList.remove('selected');
-    }
-    document.body.classList.remove('show-show-popup');
   }
 
   function selectSection(section) {
