@@ -1,0 +1,159 @@
+@import "variables.css";
+
+@font-face {
+  font-family: 'Brandon Text';
+  src: url('../fonts/BrandonText-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brandon Text Bold';
+  src: url('../fonts/BrandonText-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  color: var(--dark);
+  font-family: 'Brandon Text', Arial, sans-serif;
+}
+
+main {
+  width: 100vw;
+}
+
+p a {
+  text-decoration: underline;
+}
+
+#shows,
+#content > nav .tab.selected {
+  background: var(--light);
+}
+
+#show,
+#content > nav .tab.selected,
+#content > nav .tab.selected * {
+  color: var(--dark);
+}
+
+#content {
+  background: var(--dark);
+}
+
+#shows > nav .tab.selected {
+  background: var(--dark);
+  background-size: cover;
+}
+
+#content > nav .tab.selected {
+  background: var(--light);
+  background-size: cover;
+}
+.tab.selected a {
+  cursor: default;
+}
+
+.tab:not(.selected):hover {
+  color: var(--light);
+  background: var(--accent);
+  background-size: cover;
+}
+
+.home-tab img {
+  height: 40px;
+}
+
+.tab.home-tab:hover {
+  background: transparent;
+}
+
+.home-tab:hover img {
+  height: 50px;
+}
+
+
+#content,
+#shows > nav .tab.selected,
+#shows > nav .tab.selected * {
+  color: var(--light);
+}
+
+main > section {
+  height: 100%;
+}
+
+main > section header {
+  min-height: 70px;
+  max-height: 70px;
+  padding: 32px 0;
+}
+  
+main > section > nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main > section > nav .tab {
+  flex-grow: 1;
+  text-align: center;
+}
+
+main > section > nav .tab a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6ex;
+  width: 100%;
+  font-weight: bold;
+}
+
+main > section > section:not(.selected) {
+  display: none;
+}
+
+/* Small */
+@media screen and (max-width: 1151px) {
+  body,
+  main,
+  main > section {
+    min-height: 100vh;
+  }
+
+  main > section:not(.selected) {
+    display: none;
+  }
+}
+
+/* Large */
+@media screen and (min-width: 1152px) {
+  main {
+    display: flex;
+    height: 100vh;
+  }
+  
+  main > section {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+  }
+  
+  #shows {
+    width: 35vw;
+  }
+  
+  #content {
+    width: 65vw;
+  }
+  
+  main > section > nav .home-tab {
+    display: none;
+  }
+  
+  main > section > section {
+    height: 100%;
+    overflow-y: scroll;
+  }
+}

@@ -1,0 +1,79 @@
+* {
+  font-family: monospace;
+  font-size: 12pt;
+  font-weight: normal;
+}
+
+body {
+  width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+#transpose {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+}
+
+.title {
+  font-size: 20pt;
+  font-variant: small-caps;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.artist {
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+#chords .name {
+  font-weight: bold;
+  padding-right: 12px;
+}
+
+.section-heading {
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 16px;
+}
+
+.line {
+  margin: 0;
+  margin-top: 8px;
+}
+
+pre {
+  margin: 0;
+}
+
+.chords {
+  font-weight: bold;
+}
+
+
+body {
+  counter-reset: li;
+}
+
+ol {
+  margin-top: 0;
+}
+
+ol > li {
+  list-style: none;
+}
+
+ol > li:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: 0;
+  width: 2em;
+  text-align: right;
+  margin-top: 20px;
+  font-size: 10pt;
+}

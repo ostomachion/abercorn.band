@@ -1,0 +1,40 @@
+@import 'variables.css';
+
+#main-menu {
+    display: none;
+}
+
+
+/* Small (for reference) */
+@media screen and (max-width: 1151px) {
+    .show-main-menu #main-menu {
+        display: block;
+    }
+
+    .show-main-menu main,
+    .show-main-menu aside {
+        display: none;
+    }
+
+    #main-menu {
+        background: var(--dark);
+        color: var(--light);
+        width: 100%;
+    }
+
+    #main-menu #main-menu-list li {
+        display: block;
+        text-align: center;
+        font-size: 24pt;
+    }
+
+    #main-menu h1 img {
+        display: block;
+        margin: auto;
+    }
+
+    #main-menu .social ul {
+        margin-top: 2em;
+        justify-content: center;
+    }
+}

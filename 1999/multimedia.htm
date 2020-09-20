@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>Abercorn on the World Wide Web!</TITLE>
+<LINK REL="shortcut icon" TYPE="image/png" HREF="favicon.png">
+</HEAD>
+<SCRIPT TYPE="text/javascript">
+  names = ['1999', 'abercorn_logo', 'love_is_free', 'up_from_here', 'stage'];
+  buyTexts = ['Buy our CD!', 'Buy this shirt!', 'Buy this shirt!', 'Buy this shirt!', 'Buy a patch!'];
+  productPages = ['up-from-here-ep', 'black-shirt', 'red-shirt', 'white-shirt', 'patch'];
+
+  selected = 0;
+  function select(index) {
+    links = document.getElementById("LINKS").children;
+    for (i = 0; i < links.length; i++) {
+      if (i == index)
+        links[i].setAttribute('class', 'selected');
+      else
+        links[i].removeAttribute('class');
+    }
+    selected = index;
+    document.getElementById('DOWNLOAD_SM').href = 'wallpapers/' + names[index] + '.jpg';
+    document.getElementById('DOWNLOAD_LG').href = 'wallpapers/' + names[index] + '.png';
+    document.getElementById('PREVIEW').src = 'wallpapers/' + names[index] + '.jpg';
+    document.getElementById('BUY').href = '/shop/' + productPages[index] + '.html';
+    document.getElementById('BUY').textContent = buyTexts[index];
+  }
+</SCRIPT>
+<STYLE>
+  @font-face {
+    font-family: Fixedsys;
+    src: url(fonts/FIXEDSYS.TTF);
+  }
+
+  BODY {
+    font-family: Fixedsys, Courier, monospace;
+    margin: 0;
+    padding: 0;
+  }
+
+  TABLE {
+    background: rgb(53,57,86);
+    background: radial-gradient(circle, rgba(53,57,86,1) 0%, rgba(53,57,86,1) 0%, rgba(27,26,42,1) 100%);
+    border-width: 4px;
+    border-style: double;
+    border-color: #646577;
+  }
+
+  #HEADER * {
+    color: white;
+  }
+
+  BUTTON,
+  #NAV TD {
+    font-family: Fixedsys, Courier, monospace;
+    background: lightgray;
+    border-width: 4px;
+    border-style: outset;
+  }
+
+  BUTTON A {
+    text-decoration: none;
+    color: black;
+  }
+
+  #NAV A {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .BLACK {
+    background: black;
+    color: #0f0;
+    border-width: 2px;
+    border-style: inset;
+    border-color: rgba(53,57,86,1);
+    margin: 16px;
+  }
+
+  .BLACK A {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .BLACK A.SELECTED {
+    color: white;
+    background: #00f;
+  }
+
+  .YELLOW {
+    color: #e0cd33;
+  }
+
+  #BUY_BUTTON {
+    width: 360px;
+    margin-top: 8px;
+    padding: 0;
+  }
+
+  #BUY {
+    display: block;
+    width: 360px;
+    margin: 0;
+    padding: 0;
+  }
+  BLINK {
+    animation: 2s linear infinite blinky;
+  }
+
+  ::selection {
+    background-color: #008;
+  }
+  
+  @keyframes blinky {
+      0% { visibility: hidden; }
+      50% { visibility: hidden; }
+      100% { visibility: visible; }
+  }
+
+  @keyframes load {
+      0% { clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%); }
+      100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  }
+</STYLE>
+<BODY BGCOLOR=BLACK BACKGROUND=gifs/matrix.gif TEXT="#00ff00" LINK="#00FF00" ALINK="#00FF00" VLINK="#00FF00">
+<BASEFONT FACE="Courier,monospace">
+<TABLE ALIGN=CENTER WIDTH="800px" HEIGHT="600px">
+  <TBODY>
+    <TR HEIGHT="64px">
+      <TD VALIGN=TOP COLSPAN=2>
+        <TABLE ID=HEADER WIDTH="800px" CELLSPACING="4px">
+          <TR>
+            <TD COLSPAN=5 ALIGN=CENTER STYLE="color: #e3cd9b; padding: 8px">
+              ================ M U L T I M E D I A ================
+            </TD>
+          </TR>
+          <TR ID=NAV>
+            <TD ALIGN=CENTER WIDTH="160px"><A HREF="index.htm">INDEX</A></TD>
+            <TD ALIGN=CENTER WIDTH="160px"><A HREF="shows.htm">SHOWS</A></TD>
+            <TD ALIGN=CENTER WIDTH="160px"><A HREF="multimedia.htm">MULTIMEDIA</A></TD>
+            <TD ALIGN=CENTER WIDTH="160px"><A HREF="guestbook.htm">GUESTBOOK</A></TD>
+            <TD ALIGN=CENTER WIDTH="160px"><A HREF="404/index.htm">ABOUT</A></TD>
+          </TR>
+        </TABLE>
+      </TD>
+    </TR>
+    <TR>
+      <TD ALIGN=CENTER COLSPAN=2>
+        <IMG SRC="gifs/red.gif">
+      </TD>
+    </TR>
+    <TR>
+      <TD WIDTH="50%" HEIGHT="350px" VALIGN=TOP>
+        <TABLE WIDTH="100%" HEIGHT="100%" CLASS=BLACK>
+          <TR>
+            <TD VALIGN=TOP ID=LINKS>
+              <A HREF="javascript:select(0)" CLASS=SELECTED>Wallpaper 1</A>
+              <A HREF="javascript:select(1)">Wallpaper 2</A>
+              <A HREF="javascript:select(2)">Wallpaper 3</A>
+              <A HREF="javascript:select(3)">Wallpaper 4</A>
+              <A HREF="javascript:select(4)">Wallpaper 5</A>
+            </TD>
+          </TR>
+        </TABLE>
+      </TD>
+      <TD VALIGN=TOP>
+        <CENTER><IMG ID=PREVIEW SRC="wallpapers/1999.jpg" WIDTH="400px" HEIGHT="300px" CLASS=BLACK></CENTER>
+        <CENTER>
+          <BUTTON ID=PREV ONCLICK="select(Math.max(0, selected - 1))">&lt;</BUTTON>
+          <BUTTON><A ID=DOWNLOAD_SM DOWNLOAD="wallpaper.jpg" HREF="wallpapers/1999.jpg">Download 800x600</A></BUTTON>
+          <BUTTON><A ID=DOWNLOAD_LG DOWNLOAD="wallpaper.png" HREF="wallpapers/1999.png">Download 1920x1080</A></BUTTON>
+          <BUTTON ID=NEXT ONCLICK="select(Math.min(4, selected + 1))">&gt;</BUTTON>
+        </CENTER>
+        <CENTER><BUTTON ID=BUY_BUTTON><A ID=BUY HREF="/shop/up-from-here-ep.html">Buy our CD!</A></BUTTON></CENTER>
+      </TD>
+    </TR>
+    <TR>
+      <TD COLSPAN=2>
+        <A HREF="Abercorn.scr" CLASS=YELLOW>Click here to download the Abercorn screensaver!</A>
+      </TD>
+    </TR>
+    <TR>
+      <TD COLSPAN=2>&copy; 1999</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+</BODY>
+</HTML>

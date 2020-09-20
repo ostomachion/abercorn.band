@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#content > * {
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h1 img {
+    height: 62px;
+}
+
+.social ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social img {
+    height: 40px;
+    margin: 0 8px;
+}
+
+/* Large */
+@media screen and (max-width: 1152px) {
+    header {
+        display: none;
+    }
+}

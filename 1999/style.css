@@ -1,0 +1,41 @@
+BODY {
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    font-family: Times, serif;
+}
+
+IMG {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.shows {
+    border-style: ridge;
+    border-width: 4px;
+    border-color: grey;
+}
+
+.shows TD {
+    border-style: inset;
+    border-width: 2px;
+    border-color: grey;
+}
+
+BLINK {
+    animation: 2s linear infinite blinky;
+}
+@keyframes blinky {
+    0% { visibility: hidden; }
+    50% { visibility: hidden; }
+    100% { visibility: visible; }
+}
+
+.load {
+    animation: load 15s linear;
+}
+
+@keyframes load {
+    0% { clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%); }
+    100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+}

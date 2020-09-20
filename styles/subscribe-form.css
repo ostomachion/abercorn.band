@@ -1,0 +1,66 @@
+@import "variables.css";
+
+.subscribe-form h1 {
+    text-align: center;
+    margin: 54px 0;
+    font-size: 72pt;
+    font-family: "Originals";
+    font-weight: normal;
+    text-transform: uppercase;
+    font-style: italic;
+    line-height: 1ex;
+    width: 100%;
+}
+
+.subscribe-form h1 img {
+    display: block;
+    margin: auto;
+    margin-bottom: 28px;
+}
+
+.subscribe-form p {
+    font-weight: bold;
+    max-width: 450px;
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 16px;
+    font-size: 14pt;
+}
+
+.subscribe-form .textbox,
+.subscribe-form .submit,
+.subscribe-form label {
+    display: block;
+    margin: auto;
+    margin-bottom: 1em;
+    width: 70%;
+    max-width: 400px;
+    font-size: 14pt;
+    line-height: 2em;
+}
+
+.subscribe-form input {
+    box-sizing: border-box;
+    border: none;
+    padding: 8px;
+}
+
+.subscribe-form input::placeholder {
+    color: var(--accent);
+    font-weight: bold;
+    opacity: 1;
+}
+
+.subscribe-form label input {
+    display: inline;
+}
+
+.subscribe-form .submit {
+    background: var(--accent);
+    color: var(--light);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}

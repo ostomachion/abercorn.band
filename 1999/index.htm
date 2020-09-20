@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<TITLE>Abercorn on the World Wide Web!</TITLE>
+<LINK REL="shortcut icon" TYPE="image/png" HREF="favicon.png">
+<LINK REL=stylesheet HREF="style.css">
+<SCRIPT TYPE="text/javascript" SRC="cursor.js"></SCRIPT>
+<SCRIPT TYPE="text/javascript" SRC="script.js"></SCRIPT>
+<STYLE>
+  @font-face {
+    font-family: "Times16";
+    src: url(fonts/Times-16-Regular.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Times16";
+    src: url(fonts/Times-16-Bold.woff) format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Times32";
+    src: url(fonts/Times-32-Bold.woff) format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  body {
+    font-family: Times16;
+  }
+
+  h2 {
+    font-family: Times32;
+  }
+  ::selection {
+    background-color: #008;
+  }
+</STYLE>
+</HEAD>
+<BODY BGCOLOR=BLACK BACKGROUND=gifs/bg.gif TEXT="#e9f259">
+<TABLE ALIGN=CENTER WIDTH="800px" CELLPADDING=5>
+  <TBODY>
+    <TR>
+      <TD>
+        <H2 ALIGN=CENTER><MARQUEE><FONT SIZE=6>WELCOME TO <BLINK>ABERCORN</BLINK>'S WEB-SITE!!!!!!</FONT></MARQUEE></H2>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD>
+        <TABLE BGCOLOR=LIGHTGRAY WIDTH="100%" BORDER="">
+          <TBODY>
+            <TR>
+              <TD ALIGN=CENTER><B><A HREF="index.htm">index</A></B></TD>
+              <TD ALIGN=CENTER><B><A HREF="shows.htm">shows</A></B></TD>
+              <TD ALIGN=CENTER><B><A HREF="multimedia.htm">multimedia</A></B></TD>
+              <TD ALIGN=CENTER><B><A HREF="guestbook.htm">guestbook</A></B></TD>
+              <TD ALIGN=CENTER><B><A HREF="404/index.htm">about</A></B></TD>
+            </TR>
+          </TBODY>
+        </TABLE>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD ALIGN=RIGHT>
+          <A HREF="javascript:void(0);" ONCLICK="toggleAudio()"><IMG SRC="gifs/play.gif"></A>
+          <audio autoplay loop onplay=handleFirstPlay(event)><source src="media/music.flac"></audio>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD><CENTER><B><A HREF="/" STYLE="color: lightblue">Looking for the old site? Click here</A></B></CENTER></TD>
+    </TR>
+    
+    <TR>
+      <TD>
+
+        <CENTER><IMG SRC=gifs/hearts.gif></CENTER>
+
+        <P>We're so happy you stopped by. Thanks for hanging out with us on this adventure! We are a bunch of twenty
+          some year olds trying to piece it all together, play music, find happiness, and share the love. "Abercorn"
+          was dreamed up after a year of jamming out in a basement with very little direction or goals. Thanks to
+          some very supportive friends, and a strong determination to do something- literally anything with our music
+          and a new motto of "one percent better every day" we started playing live shows in the summer of 1997. We're
+          not much into titles, so we play whatever sound inspires us in the moment and we play from the heart. As
+          individuals, we bring our own unique style to our band, sharing, jamming, creating together. We're not sure
+          what lies ahead, but we're really excited for the future! So stick around, and help us reach our goals, and
+          as always, spread the love. We couldn't do it without you!</P>
+        
+        <CENTER>
+          <IMG SRC=gifs/construction_sign.gif>
+          <IMG SRC=gifs/construction_sign.gif>
+          <IMG SRC=gifs/under_construction.gif>
+          <IMG SRC=gifs/construction_sign.gif>
+          <IMG SRC=gifs/construction_sign.gif>
+        </CENTER>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD>
+        <CENTER><IMG SRC=img/band.gif WIDTH="660px" CLASS="load"></CENTER>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD>
+          <CENTER>
+            <IMG SRC="gifs/clef.gif">
+            <IMG SRC="gifs/drums.gif">
+            <IMG SRC="gifs/guitar.gif">
+          </CENTER>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD>
+        <MARQUEE><H2>UPCOMING SHOWS</H2></MARQUEE>
+
+        
+        <TABLE BGCOLOR=LIGHTGRAY STYLE="color:red;" BORDER=1 WIDTH="100%" CLASS=shows>
+                          <TR>
+            <TD><B>[CANCELED]Fall Foliage Festival</B></TD>
+            <TD>Martinsville</TD>
+            <TD>October 10, 1999</TD>
+            <TD>5:00 pm</TD>
+          </TR>
+                </TABLE>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD>
+        <CENTER>
+          <IMG SRC="gifs/heart.gif">
+          <IMG SRC="gifs/heart.gif">
+          <IMG SRC="gifs/heart.gif">
+        </CENTER>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD>
+        <CENTER><IMG SRC="img/mosey.gif" WIDTH="660px" CLASS="load"></CENTER>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD>
+        <CENTER><IMG WIDTH="100%" SRC="gifs/flames.gif"></CENTER>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD>
+        <CENTER><IMG SRC=img/bobfm.gif WIDTH="660px" CLASS="load"></CENTER>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD>
+        <CENTER>
+          <IMG SRC="gifs/skull.gif">
+          <IMG SRC="gifs/baby.gif">
+          <IMG SRC="gifs/skull.gif">
+        </CENTER>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD>
+        <CENTER><IMG SRC=img/punk.gif WIDTH="660px" CLASS="load"></CENTER>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD>
+        <CENTER><IMG WIDTH="100%" SRC="gifs/guitar_line.gif"></CENTER>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD>
+        <CENTER><IMG SRC=img/theater.gif WIDTH="660px" CLASS="load"></CENTER>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD align=RIGHT>
+        <IMG SRC=counter/0.gif BORDER=0>
+        <IMG SRC=counter/0.gif BORDER=0>
+        <IMG SRC=counter/0.gif BORDER=0>
+        <IMG SRC=counter/6.gif BORDER=0>
+        <IMG SRC=counter/3.gif BORDER=0>
+        <IMG SRC=counter/7.gif BORDER=0>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD>
+        <CENTER><A HREF="#TOP"><TT><B>Back to top</B></TT></A></CENTER>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD>
+        <CENTER>
+          <A HREF="404/index.htm"><IMG SRC="buttons/browser7.gif"></A>
+          <A HREF="404/index.htm"><IMG SRC="buttons/800x600.gif"></A>
+          <A HREF="404/index.htm"><IMG SRC="buttons/aolsucks.gif"></A>
+          <A HREF="404/index.htm"><IMG SRC="buttons/lovenow.gif"></A>
+          <A HREF="404/index.htm"><IMG SRC="buttons/best_viewed_with_eyes.gif"></A>
+          <A HREF="404/index.htm"><IMG SRC="buttons/koolaid.gif"></A>
+          <A HREF="404/index.htm"><IMG SRC="buttons/shockwave.gif"></A>
+          <A HREF="404/index.htm"><IMG SRC="buttons/Winamp.gif"></A>
+        </CENTER>
+      </TD>
+    </TR>
+    
+    <TR>
+      <TD>
+        &copy; 1999
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+</BODY>
+</HTML>

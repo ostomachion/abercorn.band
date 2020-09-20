@@ -1,0 +1,112 @@
+@import "variables.css";
+
+#shows .shows {
+  list-style: none;
+}
+
+#shows .show.selected {
+  color: var(--light);
+  background: var(--dark);
+}
+
+#shows .shows .show:not(.selected) {
+  cursor: pointer;
+}
+
+#shows .shows .show:not(.selected):hover {
+  color: var(--light);
+  background: var(--accent);
+}
+
+#shows ul {
+  padding: 0;
+  margin: 0;
+}
+
+#shows nav,
+#shows .show {
+  padding: 0 4vw;
+}
+
+#shows .show:not(.selected) .details {
+  display: none;
+}
+
+#shows .show h1 {
+  font-size: 24pt;
+  text-align: left;
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+#shows .show .venue-name {
+  font-weight: bold;
+}
+
+#shows .links {
+  margin: 28px 0;
+}
+
+#shows .links .get-notified img {
+  height: 24px;
+  position: relative;
+  top: 6px;
+  margin-right: 4px;
+}
+
+#shows .links .get-notified a::after {
+  content: ' \00bb';
+  font-size: 150%;
+}
+
+#shows .show > * {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+#shows .show h1 {
+  display: table-cell;
+}
+
+#shows .show .venue-address {
+  width: 50%;
+}
+
+#shows .shows .show:not(.selected):hover .datetime .today {
+  color: var(--light);
+}
+
+#shows .show .datetime {
+  width: 30%;
+}
+
+#shows .show .datetime .today {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+#shows .show .venue-address, #shows .show .datetime {
+  display: inline-block;
+  font-size: 10pt;
+  text-transform: uppercase;
+}
+
+#shows .show .bottom {
+  padding-top: 12px;
+  padding-bottom: 28px;
+}
+
+#shows .show.canceled .name::before {
+  content: "[Canceled] ";
+  font-weight: bold;
+  color: var(--accent);
+}
+
+#shows .show.canceled:hover .name::before {
+  color: var(--light);
+}
+
+#shows .show.canceled.selected .name::before {
+  color: var(--light);
+}

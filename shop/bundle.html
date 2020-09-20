@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta property="og:title" content="Abercorn">
+    <meta property="og:description" content="The official website of the band Abercorn.">
+    <meta property="og:image" content="https://abercorn.band/media/web-thumb.jpg">
+    <meta property="og:url" content="https://abercorn.band">
+    <meta property="og:site_name" content="Abercorn">
+    <meta property="fb:app_id" content="abercorn">
+    <title>Abercorn Official Site</title>
+    <base href="..">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main-menu.css">
+    <link rel="stylesheet" href="styles/content-header.css">
+    <style>
+      #content { width: 100vw; }
+      #back { display: block; font-size: 24px; text-align: center; margin-bottom: 16px; }
+      
+      .product::after { content: "Loading..."; font-size: 24px; }
+      .product.shopify-buy-frame::after { content: none; }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="content" class="selected">
+            <header>
+                <h1><a href="/"><img src="media/logotype.svg" alt="Abercorn"></a></h1>
+                <nav class="social">
+                    <ul>
+                      <li><a href="https://abercorn.bandcamp.com/releases" target="_blank"><img src="/media/social/bandcamp.svg" alt="Bandcamp"></a></li>
+                      <li><a href="https://www.instagram.com/abercornband/" target="_blank"><img src="/media/social/instagram.svg" alt="Instagram"></a></li>
+                      <li><a href="https://www.youtube.com/channel/UC5-1QQWzvpalGipYlA4lSDQ" target="_blank"><img src="/media/social/youtube.svg" alt="YouTube"></a></li>
+                      <li><a href="https://www.facebook.com/abercorn/" target="_blank"><img src="/media/social/facebook.svg" alt="Facebook"></a></li>
+                      <li><a href="https://myspace.com/AbercornBand" target="_blank"><img src="/media/social/myspace.svg" alt="MySpace"></a></li>
+                      <li><a href="#subscribe-popup"><img src="/media/social/email.svg" alt="Email"></a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section class="selected">
+                <a href="shop" id="back">&laquo; Back to shop</a>
+                <div id='product-component-1580439731544' class="product"></div>
+                <script type="text/javascript">
+                /*<![CDATA[*/
+                (function () {
+                  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+                  if (window.ShopifyBuy) {
+                    if (window.ShopifyBuy.UI) {
+                      ShopifyBuyInit();
+                    } else {
+                      loadScript();
+                    }
+                  } else {
+                    loadScript();
+                  }
+                  function loadScript() {
+                    var script = document.createElement('script');
+                    script.async = true;
+                    script.src = scriptURL;
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                    script.onload = ShopifyBuyInit;
+                  }
+                  function ShopifyBuyInit() {
+                    var client = ShopifyBuy.buildClient({
+                      domain: 'abercorn-merch.myshopify.com',
+                      storefrontAccessToken: '1afa198de6a40f4305eb066df562580a',
+                    });
+                    ShopifyBuy.UI.onReady(client).then(function (ui) {
+                      ui.createComponent('product', {
+                        id: '4376641699883',
+                        node: document.getElementById('product-component-1580439731544'),
+                        moneyFormat: '%24%7B%7Bamount%7D%7D',
+                        options: {
+                    product: {
+                        layout: "horizontal",
+                        variantId: "all",
+                        width: "100%",
+                        contents: {
+                            img: !1,
+                            imgWithCarousel: !0,
+                            variantTitle: !1,
+                            description: !0,
+                            buttonWithQuantity: !0,
+                            button: !1,
+                            quantity: !1
+                        },
+                        styles: {
+                            product: {
+                                "@media (min-width: 601px)": {
+                                    "max-width": "100%",
+                                    "margin-left": "0",
+                                    "margin-bottom": "50px"
+                                }
+                            },
+                            button: {
+                                "background-color": "#c32534",
+                                "font-family": "Brandon Text, sans-serif",
+                                "padding-left": "64px",
+                                "padding-right": "64px",
+                                ":hover": {
+                                    "background-color": "#b0212f"
+                                },
+                                "border-radius": "26px",
+                                ":focus": {
+                                    "background-color": "#b0212f"
+                                },
+                                "font-weight": "bold"
+                            },
+                            variantTitle: {
+                                "font-family": "Brandon Text, sans-serif",
+                                "font-weight": "bold"
+                            },
+                            title: {
+                                "font-family": "Brandon Text, sans-serif",
+                                "font-size": "32px",
+                                color: "white"
+                            },
+                            description: {
+                                color: "white",
+                                "font-family": "Brandon Text, sans-serif",
+                                "font-weight": "bold"
+                            },
+                            price: {
+                                "font-family": "Brandon Text, sans-serif",
+                                "font-size": "18px",
+                                color: "#c32534",
+                                "font-weight": "bold"
+                            },
+                            compareAt: {
+                                "font-size": "15px",
+                                "font-family": "Brandon Text, sans-serif",
+                                "font-weight": "bold",
+                                color: "#c32534"
+                            }
+                        },
+                        googleFonts: ["Brandon Text", "Brandon Text", "Brandon Text", "Brandon Text", "Brandon Text", "Brandon Text"]
+                    },
+                    cart: {
+                        contents: {
+                            button: !0
+                        },
+                        styles: {
+                            cart: {
+                                "background-color": "202529"
+                            },
+                            button: {
+                                "background-color": "#c32534",
+                                "font-family": "Brandon Text, sans-serif",
+                                ":hover": {
+                                    "background-color": "#b0212f"
+                                },
+                                "border-radius": "26px",
+                                ":focus": {
+                                    "background-color": "#b0212f"
+                                },
+                                "font-weight": "bold"
+                            },
+                            title: {
+                                color: "#ffffff"
+                            },
+                            footer: {
+                                "background-color": "#202529"
+                            },
+                            header: {
+                                color: "#ffffff"
+                            },
+                            lineItems: {
+                                color: "#ffffff"
+                            },
+                            subtotalText: {
+                                color: "#ffffff"
+                            },
+                            subtotal: {
+                                color: "#ffffff"
+                            },
+                            notice: {
+                                color: "#ffffff"
+                            },
+                            currency: {
+                                color: "#ffffff"
+                            },
+                            close: {
+                                ":hover": {
+                                    color: "#ffffff"
+                                },
+                                color: "#ffffff"
+                            },
+                            emptyCart: {
+                                color: "#ffffff"
+                            }
+                        },
+                        googleFonts: ["Brandon Text"]
+                    },
+                    modalProduct: {
+                        contents: {
+                            img: !1,
+                            imgWithCarousel: !0,
+                            variantTitle: !1,
+                            buttonWithQuantity: !0,
+                            button: !1,
+                            quantity: !1
+                        },
+                        styles: {
+                            product: {
+                                "@media (min-width: 601px)": {
+                                    "max-width": "100%",
+                                    "margin-left": "0px",
+                                    "margin-bottom": "0px"
+                                }
+                            },
+                            button: {
+                                "background-color": "#c32534",
+                                "font-family": "Brandon Text, sans-serif",
+                                "padding-left": "64px",
+                                "padding-right": "64px",
+                                ":hover": {
+                                    "background-color": "#b0212f"
+                                },
+                                "border-radius": "26px",
+                                ":focus": {
+                                    "background-color": "#b0212f"
+                                },
+                                "font-weight": "bold"
+                            },
+                            variantTitle: {
+                                "font-family": "Brandon Text, sans-serif",
+                                "font-weight": "bold"
+                            },
+                            title: {
+                                "font-family": "Brandon Text, sans-serif"
+                            },
+                            description: {
+                                color: "white",
+                                "font-family": "Brandon Text, sans-serif",
+                                "font-weight": "bold"
+                            },
+                            price: {
+                                "font-family": "Brandon Text, sans-serif",
+                                "font-weight": "bold"
+                            },
+                            compareAt: {
+                                "font-family": "Brandon Text, sans-serif",
+                                "font-weight": "bold"
+                            }
+                        },
+                        googleFonts: ["Brandon Text", "Brandon Text", "Brandon Text", "Brandon Text", "Brandon Text", "Brandon Text"]
+                    },
+                    toggle: {
+                        styles: {
+                            toggle: {
+                                "font-family": "Brandon Text, sans-serif",
+                                "background-color": "#c32534",
+                                ":hover": {
+                                    "background-color": "#b0212f"
+                                },
+                                ":focus": {
+                                    "background-color": "#b0212f"
+                                },
+                                "font-weight": "bold"
+                            }
+                        },
+                        googleFonts: ["Brandon Text"]
+                    },
+                    option: {
+                        styles: {
+                            label: {
+                                "font-family": "Brandon Text, sans-serif",
+                                "font-weight": "bold"
+                            },
+                            select: {
+                                "font-family": "Brandon Text, sans-serif",
+                                "font-weight": "bold"
+                            }
+                        },
+                        googleFonts: ["Brandon Text", "Brandon Text"]
+                    },
+                    productSet: {
+                        styles: {
+                            products: {
+                                "@media (min-width: 601px)": {
+                                    "margin-left": "-20px"
+                                }
+                            }
+                        }
+                    },
+                    lineItem: {
+                        styles: {
+                            variantTitle: {
+                                color: "#ffffff"
+                            },
+                            title: {
+                                color: "#ffffff"
+                            },
+                            price: {
+                                color: "#ffffff"
+                            },
+                            quantity: {
+                                color: "#ffffff"
+                            },
+                            quantityIncrement: {
+                                color: "#ffffff",
+                                "border-color": "#ffffff"
+                            },
+                            quantityDecrement: {
+                                color: "#ffffff",
+                                "border-color": "#ffffff"
+                            },
+                            quantityInput: {
+                                color: "#ffffff",
+                                "border-color": "#ffffff"
+                            }
+                        }
+                    }
+                },
+                      });
+                    });
+                  }
+                })();
+                /*]]>*/
+                </script>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

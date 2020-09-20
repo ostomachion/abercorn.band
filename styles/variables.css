@@ -1,0 +1,11 @@
+:root {
+    --dark: #202529;
+    --light: white;
+    --accent: #c32534;
+}
+
+/* Small (for reference) */
+@media screen and (max-width: 1151px) { }
+
+/* Large (for reference) */
+@media screen and (min-width: 1152px) { }

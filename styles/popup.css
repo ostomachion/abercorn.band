@@ -1,0 +1,105 @@
+@import 'variables.css';
+
+aside {
+    display: none;
+    color: var(--light);
+}
+
+/* Small */
+@media screen and (max-width: 768px) {
+    aside.selected {
+        height: 100%;
+    }
+
+    aside.selected .popup {
+        background: var(--accent);
+        height: 100%;
+    }
+
+    aside.selected {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    aside.selected, aside .popup, aside.selected .subscribe-form {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .exit:after {
+        content: '\00ab Go back';
+        color: var(--light);
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+    .exit {
+        display: flex;
+        background: var(--accent);
+        height: 6ex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 54px;
+        cursor: pointer;
+    }
+}
+
+/* Large */
+@media screen and (min-width: 769px) {
+    aside.selected {
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    aside .popup {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        min-width: 500px;
+        max-width: 90%;
+        margin: 2em;
+    }
+
+    aside.selected .subscribe-form {
+        position: relative;
+        left: -50%;
+        background: var(--accent);
+        padding: 2em;
+        box-shadow: 0px 10px 24px 0px rgba(0,0,0,0.2);
+        border: 2px solid var(--light);
+    }
+
+    .exit:after {
+        content: '\00d7';
+        font-size: 18pt;
+        color: var(--accent);
+    }
+
+    .exit {
+        position: relative;
+        left: 46%;
+        top: 18px;
+        background: var(--light);
+        color: var(--dark);
+        height: 24px;
+        width: 24px;
+        display: block;
+        border-radius: 50%;
+        z-index: 1;
+        text-align: center;
+        line-height: 24px;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+        cursor: pointer;
+    }
+}
