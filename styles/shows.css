@@ -4,6 +4,13 @@
   list-style: none;
 }
 
+#shows .no-shows {
+  list-style: none;
+  padding: 4vw;
+  font-size: 20pt;
+  text-align: center;
+}
+
 #shows .show.selected {
   color: var(--light);
   background: var(--dark);
