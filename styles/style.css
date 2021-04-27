@@ -25,3 +25,8 @@ nav ul {
   text-transform: uppercase;
 }
 
+#nineties {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px;
+}
